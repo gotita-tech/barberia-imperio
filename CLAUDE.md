@@ -42,3 +42,5 @@ Rediseño urbano: Fase 5 conecta categorías/sugerencias al formulario, tarjetas
 Vercel: usar plugin mcp__codex_apps__vercel y CLI con scope gotech2 y global-config de work/vercel-auth. MCP manual duplicado desactivado en config.toml por 403 de equipo tras OAuth exitoso. No repetir ese login por fase. Ver docs/CONEXION-VERCEL.md. Git usa credential.username=gotita-tech en configuración local.
 
 Rediseño urbano: Fase 6 QA completado. Cinco anchos sin fallos, axe cero, Lighthouse móvil 95 rendimiento/100 accesibilidad. Preview final 1zcv3fptj y comparativas en docs/revision. Preparar PR a main y esperar aprobación explícita antes de fusionar/producción; ver docs/REDISENO-URBANO-FASE-6.md.
+
+Auditoría Claude (2026-10-14): rama auditoria-claude con mejoras de rendimiento, SEO, accesibilidad y tokens sin cambiar la estética del home. PR hacia rediseno-urbano; ver docs/AUDITORIA-CLAUDE.md. Producción sigue requiriendo aprobación explícita del PR #1.

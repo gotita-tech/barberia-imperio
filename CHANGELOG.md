@@ -37,3 +37,9 @@
 - Metadatos y Open Graph con logo original, errores accesibles por campo y fecha del negocio en Chile.
 - Consulta dominical permitida hasta confirmar política; nombres accesibles coherentes y controles de 44 px.
 - QA local a 360/390/768/1024/1440, teclado, lint y axe aprobados. Preparación de PR y validación final Vercel.
+
+## 2026-10-14 — Auditoría Claude
+- Rama auditoria-claude desde rediseno-urbano; estética del home sin cambios (capturas comparadas a cinco anchos).
+- Logo WebP 96 px, caché de fuentes/imágenes en Vercel, canonical, JSON-LD HairSalon con datos verificados, OG 1200×630 y página 404.
+- Accesibilidad: borde de controles a 3:1, flechas decorativas ocultas al lector, aviso de nueva pestaña, scroll-padding corregido; axe 0 infracciones.
+- Tokens de color sin valores escritos a mano; originales archivados fuera del deploy. Ver docs/AUDITORIA-CLAUDE.md.
