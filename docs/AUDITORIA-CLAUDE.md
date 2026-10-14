@@ -61,8 +61,8 @@ Medido en local sin compresión HTTP; en Vercel (con Brotli y la nueva caché) l
 ## Sugerencias de texto, no aplicadas (requieren tu ok)
 
 - Pie: aplicado el 14-10-2026, ahora muestra "José Miguel Carrera 315, Llolleo".
-- Unificar "Consultar hora" (filas de servicios) y "Consultar una hora" (header, hero, barra móvil).
-- "PREVIEW 01 / 01" en el asesor está en inglés; alternativa: "VISTA PREVIA".
+- Aplicado el 14-10-2026: todas las llamadas dicen "Consultar una hora".
+- Aplicado el 14-10-2026: el asesor dice "VISTA PREVIA 01 / 01".
 
 ## Pendiente para el lanzamiento oficial (sin cambios ahora)
 
