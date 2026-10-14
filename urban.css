@@ -99,6 +99,10 @@
 .urban .consultation-status { color: var(--cream); font-size: 14px; }
 .urban .consultation-status:empty { display: none; }
 .urban .consultation-panel { scroll-margin-top: 24px; }
+.urban .brand, .urban .band-grid a { min-height: 44px; }
+.urban .band-grid p > a { display: inline-flex; align-items: center; }
+.urban .field-error { color: #ffe1d8; font-size: 14px; margin-top: 8px; }
+.urban [aria-invalid='true'] { border-color: #eab7a9; }
 @media(max-width:580px) {
   .urban .service-row { grid-template-columns: 24px minmax(0,1fr); }
   .urban .service-action { grid-column: 2; justify-content: flex-start; min-height: 44px; }

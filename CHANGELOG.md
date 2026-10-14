@@ -32,3 +32,8 @@
 - Filas completas con categoría preseleccionada; sugerencia al comentario sin borrar texto ni duplicarla.
 - CTA móvil condicional y galería a Instagram; mensaje preparado se invalida al editar preferencias.
 - Pruebas locales 360/768/1440, lint y axe aprobados.
+
+## 2026-10-14 — Rediseño urbano / Fase 6
+- Metadatos y Open Graph con logo original, errores accesibles por campo y fecha del negocio en Chile.
+- Consulta dominical permitida hasta confirmar política; nombres accesibles coherentes y controles de 44 px.
+- QA local a 360/390/768/1024/1440, teclado, lint y axe aprobados. Preparación de PR y validación final Vercel.

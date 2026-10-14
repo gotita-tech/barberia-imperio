@@ -21,10 +21,10 @@ Carbón `#0B0B0D` · Grafito `#151518` · Marfil `#F1EDE6` · Bronce `#C7A878` �
 - `docs/` especificación, roadmap, decisiones, riesgos.
 
 ## Estado actual
-Fase 0 cerrada (ver ROADMAP). Siguiente: Fase 1 (Next.js + sitio MVP).
+Demo estática publicada en main. Rediseño urbano fases 1–5 completadas; Fase 6 QA/PR en curso. Desarrollo Next.js/Supabase separado en fase-1-mvp y fase-2-reservas, sin integrar a producción.
 
 ## Entorno
-Node 26, npm 11, git 2.55. **No hay `gh` ni `vercel` CLI instalados**, ni autenticación GitHub/Vercel → repo remoto y vínculo Vercel pendientes.
+Node 26, npm 11, git 2.55. GitHub y Vercel operativos mediante Git Credential Manager, plugin y CLI; ver docs/CONEXION-VERCEL.md. gh instalado, sin usar su token inválido.
 
 ## Encargo activo: rediseño urbano (2026-10-14)
 

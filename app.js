@@ -140,14 +140,27 @@
   }));
 
   const dateInput = $('appointment-date');
-  // Fecha local (no UTC): evita bloquear fechas válidas por diferencia de zona horaria.
+  // Fecha del negocio: consistente incluso si el visitante está en otra zona horaria.
   const now = new Date();
-  const today = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0,10);
+  const parts = new Intl.DateTimeFormat('en', {timeZone: 'America/Santiago', year: 'numeric', month: '2-digit', day: '2-digit'}).formatToParts(now);
+  const today = ['year', 'month', 'day'].map(type => parts.find(part => part.type === type).value).join('-');
   dateInput.min = today;
   const form = $('booking-form');
   const error = $('booking-error');
   form?.addEventListener('input', clearMessage);
   form?.addEventListener('change', clearMessage);
+  const setFieldError = (id, message) => {
+    const field = $(id);
+    field.setAttribute('aria-invalid', String(Boolean(message)));
+    $(id + '-error').textContent = message;
+    $(id + '-error').hidden = !message;
+  };
+  form?.addEventListener('input', event => {
+    if (['appointment-service', 'appointment-date', 'appointment-time'].includes(event.target.id)) {
+      setFieldError(event.target.id, '');
+      error.hidden = true;
+    }
+  });
   form?.addEventListener('submit', event => {
     event.preventDefault();
     error.hidden = true;
@@ -157,18 +170,23 @@
     const dateStr = dateInput.value;
     const time = $('appointment-time').value;
     const notes = $('appointment-notes').value.trim();
-    if (!service || !dateStr || !time || dateStr < today) {
-      error.textContent = 'Selecciona un servicio, una fecha futura o de hoy y una franja de horario.';
+    const errors = [
+      ['appointment-service', service ? '' : 'Selecciona una categoría de interés.'],
+      ['appointment-date', !dateStr ? 'Indica una fecha de preferencia.' : dateStr < today ? 'Elige una fecha de hoy o futura, según la hora de Chile.' : ''],
+      ['appointment-time', time ? '' : 'Selecciona una franja de horario referencial.']
+    ];
+    errors.forEach(([id, message]) => setFieldError(id, message));
+    const firstError = errors.find(([, message]) => message);
+    if (firstError) {
+      clearMessage();
+      error.textContent = 'Revisa los campos indicados para preparar tu consulta.';
       error.hidden = false;
+      $(firstError[0]).focus();
       return;
     }
     const [year,month,day] = dateStr.split('-').map(Number);
     const date = new Date(year,month-1,day);
-    if (date.getDay() === 0) {
-      error.textContent = 'Según el horario mostrado por la barbería, los domingos no se atiende. Elige otro día.';
-      error.hidden = false;
-      return;
-    }
+    // No bloquear días por una política de atención que aún no está confirmada.
     const readableDate = new Intl.DateTimeFormat('es-CL', {weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(date);
     const lines = [
       '¡Hola, Barbería Imperio! Quisiera consultar disponibilidad para una hora.',
@@ -180,7 +198,7 @@
     lines.push('¿Tienen disponibilidad? Muchas gracias.');
     $('booking-message').textContent = lines.join('\n');
     $('booking-output').hidden = false;
-    $('booking-output').scrollIntoView({behavior:'smooth',block:'nearest'});
+    $('booking-output').scrollIntoView({behavior: reducedMotion.matches ? 'auto' : 'smooth',block:'nearest'});
   });
   $('copy-booking')?.addEventListener('click', async () => {
     const text = $('booking-message').textContent;
