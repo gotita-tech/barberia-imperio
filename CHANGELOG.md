@@ -43,3 +43,10 @@
 - Logo WebP 96 px, caché de fuentes/imágenes en Vercel, canonical, JSON-LD HairSalon con datos verificados, OG 1200×630 y página 404.
 - Accesibilidad: borde de controles a 3:1, flechas decorativas ocultas al lector, aviso de nueva pestaña, scroll-padding corregido; axe 0 infracciones.
 - Tokens de color sin valores escritos a mano; originales archivados fuera del deploy. Ver docs/AUDITORIA-CLAUDE.md.
+
+## 2026-10-14 — Experiencia de cliente
+- Asesor de estilo (/asesor): 11 preguntas, motor de 12 cortes y ficha con tres recomendaciones, cómo pedirlas, mantención y barba; imprimir, copiar para Instagram y guardar.
+- Endpoint /api/asesor con Claude, apagado hasta configurar ANTHROPIC_API_KEY y ASESOR_IA_ENABLED en Vercel.
+- Mi ficha (/mi-ficha): perfil, registro de cortes con nota, informe con visitas, intervalo, próxima visita y recomendaciones según historial; guardado solo en el dispositivo.
+- Equipo (/equipo): perfiles desde data/equipo.json; perfil de muestra sin datos inventados.
+- axe 0 infracciones y CLS 0 en las páginas nuevas. Ver docs/EXPERIENCIA-CLIENTE.md.
