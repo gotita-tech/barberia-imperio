@@ -16,3 +16,7 @@ ESLint del JavaScript y comprobación de sintaxis. Sitio estático sin comando d
 Playwright a 360/768/1440 px: ambas familias realmente cargadas desde el sitio, sin solicitudes al proveedor de fuentes; hover, foco por teclado, active y bloqueo de enlace deshabilitado; copia real y rechazo del portapapeles; recomendador. Axe WCAG 2 A/AA y 2.1 AA, piso tipográfico, overflow, imágenes y errores JS. Resultado de preview se registra después del despliegue.
 
 No se alteraron fotos, variables, dominios ni configuración del proyecto Vercel. No producción ni PR. Fase 3 requiere nuevo ok/sigue. Fotografía y comportamiento de barra fija móvil siguen pendientes de sus respectivas fases.
+
+## Preview verificada
+https://barberia-imperio-demo-fykqovfbb-gotech2.vercel.app/ — READY, deployment dpl_94qhxe5ho3LhDsdJgLs2AYiGo3B4, código 664975e. Conserva autenticación Vercel.
+Lint y todas las pruebas descritas pasaron en local y en la preview a 360/768/1440 px. Axe: cero infracciones detectadas en esos escenarios. Sin texto visible menor a 12 px, errores JavaScript, imágenes rotas ni overflow horizontal. Capturas completas y de portada guardadas en outputs del chat; revisión visual de escritorio y móvil realizada. No se atribuyen puntuaciones Lighthouse a esta fase.
