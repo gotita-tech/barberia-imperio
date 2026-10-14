@@ -28,3 +28,7 @@ Revisión visual de portada escritorio/móvil realizada. Las capturas finales mu
 Fase 4: recorte de iconos de Instagram incrustados, derivados/srcset y documentación de originales requeridos. Los iconos existentes aún se ven: no se declaran corregidos. Fase 5: filas de servicios con preselección, transferencia de sugerencia al comentario, enlaces de tarjetas a Instagram y visibilidad condicional de CTA móvil. Fase 6: QA completo y PR a main para aprobación explícita.
 
 No se cambiaron fotos originales, variables, dominios ni ajustes del proyecto Vercel. No se publica producción. Esperar autorización para Fase 4 tras entregar preview y capturas.
+
+## Preview verificada
+https://barberia-imperio-demo-pj648phnn-gotech2.vercel.app/ — READY, deployment dpl_3rDbSZwdrmukSsSPAeYqeXMhceRS, código 4bf1e93. Protegida por autenticación Vercel.
+Pruebas del despliegue real a 360/768/1440 aprobadas con los mismos resultados locales: axe sin infracciones detectadas, cero overflow/imágenes rotas/errores JS/textos bajo 12 px. Capturas completas, de portada y de consulta en outputs del chat. Revisión visual realizada. Sin consultas enviadas a Instagram.
