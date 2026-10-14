@@ -16,3 +16,9 @@
 - Sistema visual carbón/marfil/bronce, fuentes locales Archivo/Archivo Black y escala fluida.
 - Estados de controles, pestañas subrayadas, foco contrastado y enlaces deshabilitados protegidos.
 - Licencias y origen de fuentes documentados; estructura urbana pendiente de Fase 3.
+
+## 2026-10-14 — Rediseño urbano / Fase 3
+- Cabecera, hero polaroid, banda de ubicación, galería escalonada, cierre Instagram y pie urbano.
+- Servicios integrado; Asesor y formulario plegables; Equipo preservado y oculto.
+- Menú móvil accesible y retiro de recursos genéricos; fotografías originales conservadas.
+- Lint y pruebas locales 360/768/1440 aprobadas con axe sin infracciones.

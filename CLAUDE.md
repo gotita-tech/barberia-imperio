@@ -33,3 +33,5 @@ Rama rediseno-urbano desde main estática 88e3ccf. Fase 0 completada sin cambios
 Rediseño urbano: Fase 1 implementada y verificada localmente; ver docs/REDISENO-URBANO-FASE-1.md. Fase 2 requiere nuevo ok/sigue.
 
 Rediseño urbano: Fase 2 incorpora tokens, Archivo/Archivo Black autoalojadas y estados accesibles. Ver docs/REDISENO-URBANO-FASE-2.md. Esperar autorización antes de Fase 3.
+
+Rediseño urbano: Fase 3 estructura urbana aplicada. Servicios integrado, Equipo conservado en template oculto, Asesor y formulario plegables. Ver docs/REDISENO-URBANO-FASE-3.md. Esperar autorización de Fase 4.

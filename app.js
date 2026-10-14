@@ -10,16 +10,21 @@
   }, true);
   const menu = document.querySelector('.menu-toggle');
   const nav = $('main-nav');
-  menu?.addEventListener('click', () => {
-    const opened = menu.getAttribute('aria-expanded') === 'true';
-    menu.setAttribute('aria-expanded', String(!opened));
-    menu.setAttribute('aria-label', opened ? 'Abrir menú' : 'Cerrar menú');
-    nav.classList.toggle('open', !opened);
+  const setMenu = opened => {
+    menu.setAttribute('aria-expanded', String(opened));
+    menu.setAttribute('aria-label', opened ? 'Cerrar menú' : 'Abrir menú');
+    nav.classList.toggle('open', opened);
+  };
+  menu?.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menu.focus();
+    }
   });
-  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    menu.setAttribute('aria-expanded', 'false');
-  }));
+  const desktopMenu = window.matchMedia('(min-width: 841px)');
+  desktopMenu.addEventListener('change', event => { if (event.matches) setMenu(false); });
 
   const filters = [...document.querySelectorAll('.filter')];
   filters.forEach(button => button.addEventListener('click', () => {
