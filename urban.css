@@ -90,6 +90,22 @@
 .urban .footer-bottom { margin-top: 24px; padding-top: 16px; }
 .urban .footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
 .urban .mobile-bar { display: none; }
+.urban .service-row:hover { background: var(--surface); }
+.urban .service-row:active { background: var(--surface2); }
+.urban .service-action { display: inline-flex; gap: 16px; align-items: center; justify-content: flex-end; font-size: 14px; color: var(--gold); }
+.urban .service-row { grid-template-columns: 28px minmax(0,1fr) 170px 145px; }
+.urban .gallery-link { display: block; }
+.urban .gallery-link:hover h3 { text-decoration: underline; text-underline-offset: .25em; }
+.urban .consultation-status { color: var(--cream); font-size: 14px; }
+.urban .consultation-status:empty { display: none; }
+.urban .consultation-panel { scroll-margin-top: 24px; }
+@media(max-width:580px) {
+  .urban .service-row { grid-template-columns: 24px minmax(0,1fr); }
+  .urban .service-action { grid-column: 2; justify-content: flex-start; min-height: 44px; }
+  .urban.mobile-cta-enabled { padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .urban .mobile-bar:not([hidden]) { display: block; background: var(--bg); padding: 12px 20px max(12px,env(safe-area-inset-bottom)); }
+  .urban .mobile-bar a { font-size: 14px; text-transform: none; letter-spacing: 0; min-height: 44px; }
+}
 @media(max-width: 1000px) {
   .urban .hero { gap: 40px; grid-template-columns: minmax(0,1fr) 290px; }
   .urban .hero h1 { font-size: clamp(48px,6vw,68px); }
@@ -143,7 +159,7 @@
   .urban .gallery-card-caption { flex-direction: column; gap: 8px; padding: 12px 0; }
   .urban .gallery-card h3 { font-size: 14px; }
   .urban .services-section h2 { font-size: 30px; }
-  .urban .service-row { grid-template-columns: 24px minmax(0,1fr) 44px; gap: 12px; }
+  .urban .service-row { grid-template-columns: 24px minmax(0,1fr); gap: 12px; }
   .urban .service-row h3 { font-size: 18px; }
   .urban .service-row .price-note { grid-column: 2; grid-row: 2; }
   .urban .advisor-content, .urban .consultation-content { padding: 0 16px 16px; }

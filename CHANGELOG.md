@@ -27,3 +27,8 @@
 - Recortes reales sin iconos, variantes 120/160/240 y srcset/sizes con dimensiones reservadas.
 - Tarjetas limitadas a 240 px; 12 originales archivados sin alterar, logo intacto.
 - Script y manifest reproducibles; requisitos de fotografía original documentados.
+
+## 2026-10-14 — Rediseño urbano / Fase 5
+- Filas completas con categoría preseleccionada; sugerencia al comentario sin borrar texto ni duplicarla.
+- CTA móvil condicional y galería a Instagram; mensaje preparado se invalida al editar preferencias.
+- Pruebas locales 360/768/1440, lint y axe aprobados.

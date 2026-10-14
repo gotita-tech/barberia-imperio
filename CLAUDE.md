@@ -37,3 +37,5 @@ Rediseño urbano: Fase 2 incorpora tokens, Archivo/Archivo Black autoalojadas y 
 Rediseño urbano: Fase 3 estructura urbana aplicada. Servicios integrado, Equipo conservado en template oculto, Asesor y formulario plegables. Ver docs/REDISENO-URBANO-FASE-3.md. Esperar autorización de Fase 4.
 
 Rediseño urbano: Fase 4 recortes sin iconos, srcset y máximo 240 px. Originales intactos en assets/_archivo/originales. Ver docs/REDISENO-URBANO-FASE-4.md. Esperar autorización antes de Fase 5.
+
+Rediseño urbano: Fase 5 conecta categorías/sugerencias al formulario, tarjetas a Instagram y CTA móvil condicional. Ver docs/REDISENO-URBANO-FASE-5.md. Esperar autorización antes de Fase 6 y aprobación explícita del PR para producción.
