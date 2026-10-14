@@ -26,3 +26,8 @@ ESLint y sintaxis del JavaScript aprobados. Stack estático: sin compilación de
 ## Preview y métricas
 Preview del código 3d16942: https://barberia-imperio-demo-6y1gyby3k-gotech2.vercel.app/ — READY. QA del deployment a cinco anchos aprobado; axe cero infracciones detectadas. Lighthouse móvil: rendimiento 95, accesibilidad 100, buenas prácticas 100, LCP 2,3 s y CLS 0. Sin discrepancias entre etiquetas visibles y nombres accesibles.
 robots.txt explícito con Disallow / agregado en la revisión final. Noindex es intencional. Las capturas antes/después se adjuntan en docs/revision; el informe Lighthouse del chat elimina la cabecera de autorización antes de guardarse.
+
+## Entrega final
+Preview: https://barberia-imperio-demo-1zcv3fptj-gotech2.vercel.app/ — READY, deployment dpl_GC7HVv3296DJM5LYdY6yceA1kQS2, código 36c2687. HTTP 200, noindex y robots.txt válidos verificados con autorización. Nueve archivos (HTML, tres CSS, JS, robots, logo y dos fuentes) idénticos byte a byte al checkout; las capturas y métricas corresponden al mismo contenido HTML/CSS/JS ya probado.
+Lighthouse se ejecutó sobre la preview anterior 6y1gyby3k con contenido visual y funcional idéntico: rendimiento 95, accesibilidad 100, buenas prácticas 100. SEO 58: noindex deliberado y lectura de robots por Lighthouse recibió HTML de autenticación Vercel; el robots.txt real se comprobó directamente y es válido. No se modifica la protección para mejorar la puntuación.
+Favicon y og:image públicos devuelven el logo original con hash idéntico. Informes Lighthouse y capturas en outputs del chat; antes/después comprimidos en docs/revision. PR a main pendiente de aprobación del usuario. Ningún mensaje de consulta enviado ni reserva activada.
