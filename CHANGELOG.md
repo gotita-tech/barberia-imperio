@@ -55,3 +55,8 @@
 - Mi ficha: perfil guardado se pliega en un resumen; "Registra un corte" primero para clientes que vuelven; atajo "Ver mi informe".
 - Informe: cada recomendación muestra solo motivos nuevos. Ficha lateral sin sticky.
 - Migración Supabase con RLS preparada y probada en memoria (scripts/test-rls.mjs); no aplicada a ningún proyecto.
+
+## 2026-10-14 — Demo para el dueño
+- Botones de WhatsApp y Google Maps en la banda de ubicación y en el cierre. WhatsApp queda inactivo y rotulado "Número por confirmar" hasta cargar el número en data/negocio.json.
+- Mi ficha: "Ver un cliente de ejemplo" (/mi-ficha?ejemplo) con datos ficticios en memoria; no toca la ficha real.
+- Panel de la barbería (/panel): demo con datos ficticios de clientes por volver, cortes más pedidos, visitas por semana y nota por corte.

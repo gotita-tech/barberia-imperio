@@ -225,4 +225,22 @@
     }
   });
   $('current-year').textContent = new Date().getFullYear();
+
+  // WhatsApp: se activa solo cuando data/negocio.json tiene el número real (formato internacional, ej. 569XXXXXXXX).
+  fetch('/data/negocio.json', {cache: 'no-store'}).then(r => r.ok ? r.json() : {}).then(negocio => {
+    const numero = String(negocio.whatsapp || '').replace(/\D/g, '');
+    if (numero.length < 10) return;
+    const texto = encodeURIComponent('¡Hola, Barbería Imperio! Quisiera consultar disponibilidad para una hora.');
+    document.querySelectorAll('[data-whatsapp]').forEach(link => {
+      link.href = 'https://wa.me/' + numero + '?text=' + texto;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.removeAttribute('aria-disabled');
+      link.querySelector('.wa-pending')?.remove();
+      const aviso = document.createElement('span');
+      aviso.className = 'sr-only';
+      aviso.textContent = ' (abre WhatsApp en otra pestaña)';
+      link.append(aviso);
+    });
+  }).catch(() => {});
 })();

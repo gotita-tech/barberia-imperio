@@ -48,3 +48,5 @@ Auditoría Claude (2026-10-14): rama auditoria-claude con mejoras de rendimiento
 Producción (2026-10-14): PR #2 fusionado en rediseno-urbano y PR #1 en main con aprobación explícita del usuario. Deploy de producción dpl_6j962iFwrwsMZZpCRLwCCbL4QYHw (commit 1a77fc1) verificado en navegador: título, canonical, OG, JSON-LD, noindex, logo WebP, 404 propia, caché de fuentes y _archivo fuera del deploy. Rollback disponible en Vercel.
 
 Experiencia de cliente (2026-10-14): /asesor, /mi-ficha y /equipo publicados a pedido explícito del usuario. IA en /api/asesor apagada hasta que el usuario configure ANTHROPIC_API_KEY y ASESOR_IA_ENABLED=true (costo). Mi ficha guarda en localStorage, sin cuentas. Equipo vacío hasta datos autorizados en data/equipo.json. Cuestionario prerenderizado: si cambian las preguntas, ejecutar node scripts/render-quiz.cjs. Ver docs/EXPERIENCIA-CLIENTE.md.
+
+Demo para el dueño (2026-10-14): /panel (datos ficticios, no enlazado en el menú), /mi-ficha?ejemplo y botones WhatsApp/Maps. WhatsApp se activa poniendo el número real en data/negocio.json (formato 569XXXXXXXX); no inventar número.
