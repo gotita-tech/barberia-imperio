@@ -24,6 +24,15 @@
   --text: var(--cream);
   --muted: #aaa39a;
   --line: #625a50;
+  /* Borde de controles de formulario: 3,57:1 sobre --bg y 3,17:1 sobre --surface (WCAG 1.4.11). --line queda solo para divisores. */
+  --control-border: #71685c;
+  /* Valores antes escritos a mano en urban.css; mismos colores, ahora con nombre. */
+  --announce-bg: #141416;
+  --on-bronze-label: #443219;
+  --on-bronze-hover: #33240f;
+  --error-text: #ffe1d8;
+  --error-border: #eab7a9;
+  --disabled-text: #bbb3a8;
   --sans: 'Archivo', Arial, Helvetica, sans-serif;
   --display: 'Archivo Black', Arial, Helvetica, sans-serif;
   --serif: Georgia, 'Times New Roman', serif;
@@ -79,7 +88,7 @@ h3, .service-row h3, .ai-widget h3, .booking-output h3 {
 .ai-widget { background: var(--surface); }
 .booking-note { background: #e4dbcd; }
 .ai-widget select, .booking-form select, .booking-form input,
-.booking-form textarea { background: var(--bg); color: var(--cream); border-color: var(--line); }
+.booking-form textarea { background: var(--bg); color: var(--cream); border-color: var(--control-border); }
 
 /* Shared controls: every state is scoped to enabled controls. */
 .btn, .nav-reserve, .filter, .text-link, .service-arrow, .menu-toggle {
@@ -105,7 +114,7 @@ h3, .service-row h3, .ai-widget h3, .booking-output h3 {
 .filter.active, .filter[aria-pressed='true'] { border-color: var(--gold); background: transparent; color: var(--cream); }
 .filter:hover:not(:disabled):not([aria-disabled='true']) { color: var(--cream); border-color: var(--gold2); background: transparent; }
 .filter:active:not(:disabled):not([aria-disabled='true']) { background: var(--surface2); color: var(--cream); }
-.menu-toggle { border: 1px solid var(--line); }
+.menu-toggle { border: 1px solid var(--control-border); }
 .service-arrow { width: 44px; height: 44px; }
 .footer-grid a, .footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
 :where(a, button, input, select, textarea):focus-visible {
@@ -115,7 +124,7 @@ h3, .service-row h3, .ai-widget h3, .booking-output h3 {
 .btn:focus-visible, a:focus-visible, .filter:focus-visible, .service-arrow:focus-visible { outline-color: var(--focus); }
 .btn:disabled, .btn[aria-disabled='true'], .nav-reserve[aria-disabled='true'],
 .text-link[aria-disabled='true'], .filter:disabled, .filter[aria-disabled='true'] {
-  color: #bbb3a8;
+  color: var(--disabled-text);
   background: var(--surface2);
   border-color: var(--line);
   cursor: not-allowed;
@@ -126,6 +135,14 @@ h3, .service-row h3, .ai-widget h3, .booking-output h3 {
   .brand strong { font-size: 19px; }
   .service-row { grid-template-columns: 24px minmax(0, 1fr) 44px; }
   .hero .eyebrow { letter-spacing: .06em; }
+}
+/* Texto solo para lectores de pantalla. */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; }
