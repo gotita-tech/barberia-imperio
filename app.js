@@ -28,6 +28,12 @@
   const desktopMenu = window.matchMedia('(min-width: 841px)');
   desktopMenu.addEventListener('change', event => { if (event.matches) setMenu(false); });
 
+  const setFieldError = (id, message) => {
+    const field = $(id);
+    field.setAttribute('aria-invalid', String(Boolean(message)));
+    $(id + '-error').textContent = message;
+    $(id + '-error').hidden = !message;
+  };
   const consultation = document.querySelector('.consultation-panel');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const clearMessage = () => {
@@ -36,7 +42,12 @@
   };
   const openConsultation = (service, status, focusNotes = false) => {
     consultation.open = true;
-    if (service) $('appointment-service').value = service;
+    if (service) {
+      $('appointment-service').value = service;
+      // Asignar el valor por código no dispara 'input': se limpia aquí el error que pudiera quedar visible.
+      setFieldError('appointment-service', '');
+      $('booking-error').hidden = true;
+    }
     clearMessage();
     $('consultation-status').textContent = status || '';
     const field = focusNotes ? $('appointment-notes') : $('appointment-service');
@@ -117,7 +128,11 @@
     const consult = document.createElement('button');
     consult.type = 'button';
     consult.className = 'btn btn-outline btn-full';
-    consult.textContent = 'Consultar este estilo ↗';
+    consult.append('Consultar este estilo ');
+    const arrow = document.createElement('span');
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+    consult.append(arrow);
     consult.addEventListener('click', () => {
       const notes = $('appointment-notes');
       const kept = notes.value.split('\n').filter(line => !importedStyle || line !== importedStyle).join('\n').trim();
@@ -149,12 +164,6 @@
   const error = $('booking-error');
   form?.addEventListener('input', clearMessage);
   form?.addEventListener('change', clearMessage);
-  const setFieldError = (id, message) => {
-    const field = $(id);
-    field.setAttribute('aria-invalid', String(Boolean(message)));
-    $(id + '-error').textContent = message;
-    $(id + '-error').hidden = !message;
-  };
   form?.addEventListener('input', event => {
     if (['appointment-service', 'appointment-date', 'appointment-time'].includes(event.target.id)) {
       setFieldError(event.target.id, '');
