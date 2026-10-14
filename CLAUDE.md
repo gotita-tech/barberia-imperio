@@ -7,13 +7,12 @@ Plataforma premium para Barbería Imperio (José Miguel Carrera 315, Llolleo, Sa
 - NO modificar Ryiori (`gotita-tech/ryiori`) ni otros proyectos. Solo referencia.
 - No inventar precios, barberos, reseñas, promociones, teléfonos. Contenido provisional = rotulado «Demostración».
 - Respetar el logo original (blanco/negro, no recolorear). Bronce solo como acento de UI.
-- Mantener 
-oindex` mientras sea demo. Sin secretos en Git. Zona horaria `America/Santiago`.
+- Mantener `noindex` mientras sea demo. Sin secretos en Git. Zona horaria `America/Santiago`.
 - Pedir autorización antes de: crear repo remoto, publicar fotos de clientes, activar costos (IA, pagos), operaciones destructivas.
 - Resúmenes breves; progreso se guarda aquí y en `docs/ROADMAP.md`.
 
 ## Paleta
-Carbón `#0B0B0D` · Grafito `#151518` · Marfil `#F1EDE6` · Bronce `#C7A878` · Gris `#999590`.
+Carbón `#0C0C0E` · Grafitos `#1A1A1D` / `#2A2A2C` · Marfil `#F2EEE7` · Bronce `#C4A676` · Bronce oscuro sobre marfil `#7A5A35`.
 
 ## Estructura
 - `legacy/demo-zip/` demo estática original (referencia; no editar).
