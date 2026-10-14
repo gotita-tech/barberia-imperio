@@ -16,3 +16,7 @@ ESLint y sintaxis aprobados; sitio estático sin compilación de framework. Play
 ## Pendiente
 
 Fase 6: QA a cinco anchos, teclado completo, Lighthouse móvil, metadatos y PR a main. Fotos originales de alta resolución y datos reales siguen pendientes. Producción solo tras aprobación explícita del PR. No se cambiaron variables, dominios ni configuración de Vercel.
+
+## Preview verificada
+https://barberia-imperio-demo-7x9mft9hu-gotech2.vercel.app/ — READY, deployment dpl_8pQKRRHKEkCX6YLBySpF58KEH1bK, código d9f13e4. Autenticación Vercel conservada.
+Las pruebas del recorrido descritas pasaron también en la preview a 360/768/1440 px: axe sin infracciones detectadas, sin overflow, errores JS, fotos rotas ni textos menores a 12 px. Capturas completas y consulta en outputs del chat; revisión visual del mensaje y copia realizada. No se envió ningún mensaje a Instagram.
