@@ -22,3 +22,8 @@
 - Servicios integrado; Asesor y formulario plegables; Equipo preservado y oculto.
 - Menú móvil accesible y retiro de recursos genéricos; fotografías originales conservadas.
 - Lint y pruebas locales 360/768/1440 aprobadas con axe sin infracciones.
+
+## 2026-10-14 — Rediseño urbano / Fase 4
+- Recortes reales sin iconos, variantes 120/160/240 y srcset/sizes con dimensiones reservadas.
+- Tarjetas limitadas a 240 px; 12 originales archivados sin alterar, logo intacto.
+- Script y manifest reproducibles; requisitos de fotografía original documentados.
