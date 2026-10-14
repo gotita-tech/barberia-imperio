@@ -50,3 +50,8 @@
 - Mi ficha (/mi-ficha): perfil, registro de cortes con nota, informe con visitas, intervalo, próxima visita y recomendaciones según historial; guardado solo en el dispositivo.
 - Equipo (/equipo): perfiles desde data/equipo.json; perfil de muestra sin datos inventados.
 - axe 0 infracciones y CLS 0 en las páginas nuevas. Ver docs/EXPERIENCIA-CLIENTE.md.
+
+## 2026-10-14 — Diseño de Mi ficha y esquema Supabase
+- Mi ficha: perfil guardado se pliega en un resumen; "Registra un corte" primero para clientes que vuelven; atajo "Ver mi informe".
+- Informe: cada recomendación muestra solo motivos nuevos. Ficha lateral sin sticky.
+- Migración Supabase con RLS preparada y probada en memoria (scripts/test-rls.mjs); no aplicada a ningún proyecto.
