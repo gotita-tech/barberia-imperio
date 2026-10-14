@@ -44,3 +44,5 @@ Vercel: usar plugin mcp__codex_apps__vercel y CLI con scope gotech2 y global-con
 Rediseño urbano: Fase 6 QA completado. Cinco anchos sin fallos, axe cero, Lighthouse móvil 95 rendimiento/100 accesibilidad. Preview final 1zcv3fptj y comparativas en docs/revision. Preparar PR a main y esperar aprobación explícita antes de fusionar/producción; ver docs/REDISENO-URBANO-FASE-6.md.
 
 Auditoría Claude (2026-10-14): rama auditoria-claude con mejoras de rendimiento, SEO, accesibilidad y tokens sin cambiar la estética del home. PR hacia rediseno-urbano; ver docs/AUDITORIA-CLAUDE.md. Producción sigue requiriendo aprobación explícita del PR #1.
+
+Producción (2026-10-14): PR #2 fusionado en rediseno-urbano y PR #1 en main con aprobación explícita del usuario. Deploy de producción dpl_6j962iFwrwsMZZpCRLwCCbL4QYHw (commit 1a77fc1) verificado en navegador: título, canonical, OG, JSON-LD, noindex, logo WebP, 404 propia, caché de fuentes y _archivo fuera del deploy. Rollback disponible en Vercel.
