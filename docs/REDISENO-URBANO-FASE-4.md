@@ -22,4 +22,4 @@ https://barberia-imperio-demo-ls4qkouyb-gotech2.vercel.app/ — READY, deploymen
 Lint de app.js y script de fotografía sin errores. Pruebas del despliegue a 360/768/1440 aprobadas; axe sin infracciones detectadas, sin overflow, imágenes rotas, errores JS ni textos bajo 12 px. En móvil se seleccionan 160 px para galería de 152 px; en escritorio, 240 px para tarjetas de 240 px. Capturas en outputs del chat. Revisión visual de recortes y portada realizada.
 
 ## Estado GitHub
-El código y la documentación están guardados en commits locales. El push quedó bloqueado por credenciales locales Git Credential Manager: Cannot prompt / unable to get password. La preview Vercel sí está publicada y verificada. Renovar el acceso GitHub y enviar rediseno-urbano antes de cerrar definitivamente la fase.
+Push completado a rediseno-urbano. El primer intento no seleccionaba la credencial existente; se resolvió especificando la cuenta gotita-tech. No fue necesaria una autorización nueva. Selección de cuenta registrada en la configuración Git local del repositorio para futuros envíos.
