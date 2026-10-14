@@ -22,3 +22,7 @@ ESLint y sintaxis del JavaScript aprobados. Stack estático: sin compilación de
 - Servicios, precios, duración, equipo y reglas oficiales pendientes. Reservas reales, Supabase y notificaciones no se activan en este rediseño estático; su preparación está separada en fase-2-reservas.
 - Lighthouse es una medición de laboratorio y puede variar. Noindex sigue intencional mientras sea demo; no se persigue puntuación SEO eliminándolo.
 - Producción sin cambios hasta aprobación del PR. No variables, dominios ni ajustes del proyecto modificados.
+
+## Preview y métricas
+Preview del código 3d16942: https://barberia-imperio-demo-6y1gyby3k-gotech2.vercel.app/ — READY. QA del deployment a cinco anchos aprobado; axe cero infracciones detectadas. Lighthouse móvil: rendimiento 95, accesibilidad 100, buenas prácticas 100, LCP 2,3 s y CLS 0. Sin discrepancias entre etiquetas visibles y nombres accesibles.
+robots.txt explícito con Disallow / agregado en la revisión final. Noindex es intencional. Las capturas antes/después se adjuntan en docs/revision; el informe Lighthouse del chat elimina la cabecera de autorización antes de guardarse.
