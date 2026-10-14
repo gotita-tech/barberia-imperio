@@ -23,3 +23,8 @@ Abrir `index.html` o, en esta carpeta, `python -m http.server 8000`.
 `CLAUDE.md` · `docs/ROADMAP.md` · `docs/DIAGNOSTICO.md` · `docs/ESPECIFICACION-IMPERIO.md`
 
 Antes de publicar de forma definitiva: verificar derechos de las fotos (Instagram y Google Maps) y datos del negocio.
+
+## Fotografía del rediseño urbano
+La portada usa recortes 3:4 en assets/images, a 120/160/240 px de ancho mediante srcset/sizes. El máximo mostrado es 240 px, acorde a los archivos disponibles. Hero sin lazy y galería con carga diferida; dimensiones explícitas 240×320.
+Los 12 originales se conservan sin cambios en assets/_archivo/originales. scripts/prepare-images.cjs reproduce los derivados con Sharp disponible; assets/images/manifest.json registra dimensiones, recortes y hashes. No se reconstruye detalle ni se amplían imágenes pequeñas.
+Para producción se requieren fotografías originales, sin iconos, de al menos 1600 px de ancho (ideal retrato 1600×2133 px o mayor), con margen alrededor del cabello y permisos de publicación confirmados. Cuando lleguen, generar variantes de 240/480/720/960/1600 px sin ampliar, actualizar dimensiones/manifest/srcset y revisar sizes según el layout. Las variantes 480 px permiten mayor detalle a 2× para tarjetas de 240 px; no se ofrecen ahora porque el material disponible no lo soporta.

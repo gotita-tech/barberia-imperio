@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c0e">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Página no encontrada | Barbería Imperio</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo-imperio-96.png">
+  <link rel="preload" href="/assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: 'Archivo'; src: url('/assets/fonts/archivo-variable.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+    @font-face { font-family: 'Archivo Black'; src: url('/assets/fonts/archivo-black.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+    :root { --bg: #0c0c0e; --cream: #f2eee7; --gold: #c4a676; --gold2: #d7bb90; --muted: #aaa39a; --announce-bg: #141416; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: var(--bg); color: var(--cream); font-family: 'Archivo', Arial, Helvetica, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .announcement { background: var(--announce-bg); color: var(--gold); font-size: 12px; text-align: center; padding: 9px 16px; }
+    .shell { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
+    header .bar { height: 106px; display: flex; align-items: center; }
+    .brand { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; text-decoration: none; }
+    .brand img { width: 48px; height: auto; display: block; }
+    .brand small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+    .brand strong { display: block; font-family: 'Archivo Black', Arial, sans-serif; font-weight: 400; font-size: 20px; letter-spacing: .12em; line-height: 1.1; }
+    main { flex: 1; display: flex; align-items: center; padding: 40px 0 88px; }
+    .eyebrow { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .1em; margin: 0 0 28px; }
+    h1 { font-family: 'Archivo Black', Arial, Helvetica, sans-serif; font-weight: 400; font-size: clamp(40px, 7vw, 88px); line-height: .99; letter-spacing: -.045em; margin: 0 0 26px; }
+    h1 span { display: block; }
+    .bronze { color: var(--gold); }
+    p.lead { color: var(--muted); font-size: 16px; max-width: 46ch; margin: 0 0 32px; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; }
+    .btn { display: inline-flex; align-items: center; gap: 30px; min-height: 50px; padding: 15px 22px; background: var(--gold); color: var(--bg); border: 1px solid var(--gold); font-size: 14px; font-weight: 600; text-decoration: none; transition: background-color .16s ease; }
+    .btn:hover { background: var(--gold2); border-color: var(--gold2); }
+    .text-link { display: inline-flex; align-items: center; gap: 22px; min-height: 44px; color: var(--gold); font-size: 14px; text-decoration: underline; text-underline-offset: .5em; text-decoration-thickness: 1px; }
+    .text-link:hover { color: var(--cream); text-decoration-thickness: 2px; }
+    :where(a):focus-visible { outline: 2px solid var(--cream); outline-offset: 4px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    @media (max-width: 580px) {
+      .shell { width: calc(100% - 40px); }
+      header .bar { height: 70px; }
+      .brand img { width: 40px; }
+      .brand strong { font-size: 18px; }
+      main { padding: 32px 0 56px; }
+      p.lead { font-size: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="announcement">Propuesta de diseño · Demostración · Sin reservas activas</div>
+    <div class="shell bar"><a class="brand" href="/"><picture><source srcset="/assets/logo-imperio-96.webp" type="image/webp"><img src="/assets/logo-imperio-96.png" alt="" width="48" height="48"></picture><span><small>BARBERÍA</small><strong>IMPERIO</strong></span></a></div>
+  </header>
+  <main class="shell">
+    <div>
+      <p class="eyebrow">Error 404 · Página no encontrada</p>
+      <h1><span>ESTA PÁGINA</span> <span class="bronze">NO EXISTE.</span></h1>
+      <p class="lead">El enlace está incompleto o la página cambió de lugar. Vuelve al inicio para ver nuestros trabajos y consultar una hora.</p>
+      <div class="actions">
+        <a class="btn" href="/">Volver al inicio <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://www.instagram.com/barberia._imperio/" target="_blank" rel="noopener noreferrer">Escríbenos por Instagram <span aria-hidden="true">↗</span><span class="sr-only"> (abre en otra pestaña)</span></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

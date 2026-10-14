@@ -1,0 +1,134 @@
+[
+  {
+    "name": "fade-perfil",
+    "role": "hero",
+    "source": "assets/_archivo/originales/fade-perfil.webp",
+    "sha256": "88e024662ae264f5a03263aa44f84e207a9cd967b0923c0e04e9ec5c97889c96",
+    "original": {
+      "width": 260,
+      "height": 347
+    },
+    "crop": {
+      "left": 10,
+      "top": 24,
+      "width": 240,
+      "height": 320
+    },
+    "variants": [
+      {
+        "file": "fade-perfil-120.webp",
+        "width": 120,
+        "height": 160
+      },
+      {
+        "file": "fade-perfil-160.webp",
+        "width": 160,
+        "height": 213
+      },
+      {
+        "file": "fade-perfil-240.webp",
+        "width": 240,
+        "height": 320
+      }
+    ]
+  },
+  {
+    "name": "fade-lineas",
+    "role": "galeria",
+    "source": "assets/_archivo/originales/fade-lineas.webp",
+    "sha256": "787a0bb4482bca4726d7f55f3bc0be1823d621401ff33bbfade96dcb0c4667f2",
+    "original": {
+      "width": 261,
+      "height": 353
+    },
+    "crop": {
+      "left": 10,
+      "top": 24,
+      "width": 240,
+      "height": 320
+    },
+    "variants": [
+      {
+        "file": "fade-lineas-120.webp",
+        "width": 120,
+        "height": 160
+      },
+      {
+        "file": "fade-lineas-160.webp",
+        "width": 160,
+        "height": 213
+      },
+      {
+        "file": "fade-lineas-240.webp",
+        "width": 240,
+        "height": 320
+      }
+    ]
+  },
+  {
+    "name": "diseno-ondas",
+    "role": "galeria",
+    "source": "assets/_archivo/originales/diseno-ondas.webp",
+    "sha256": "f1bb75e2d8181b3a4959b6bcc8b951008e1f1c2818d02093b78d4f660772a559",
+    "original": {
+      "width": 263,
+      "height": 349
+    },
+    "crop": {
+      "left": 11,
+      "top": 14,
+      "width": 240,
+      "height": 320
+    },
+    "variants": [
+      {
+        "file": "diseno-ondas-120.webp",
+        "width": 120,
+        "height": 160
+      },
+      {
+        "file": "diseno-ondas-160.webp",
+        "width": 160,
+        "height": 213
+      },
+      {
+        "file": "diseno-ondas-240.webp",
+        "width": 240,
+        "height": 320
+      }
+    ]
+  },
+  {
+    "name": "corte-frontal",
+    "role": "galeria",
+    "source": "assets/_archivo/originales/corte-frontal.webp",
+    "sha256": "a7d7dcd28cca2823ef1050c0298bacbe6329afd561a8daad3d0f142db092bf88",
+    "original": {
+      "width": 263,
+      "height": 347
+    },
+    "crop": {
+      "left": 11,
+      "top": 24,
+      "width": 240,
+      "height": 320
+    },
+    "variants": [
+      {
+        "file": "corte-frontal-120.webp",
+        "width": 120,
+        "height": 160
+      },
+      {
+        "file": "corte-frontal-160.webp",
+        "width": 160,
+        "height": 213
+      },
+      {
+        "file": "corte-frontal-240.webp",
+        "width": 240,
+        "height": 320
+      }
+    ]
+  }
+]

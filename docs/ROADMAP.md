@@ -11,3 +11,6 @@ Estados: ☐ pendiente · ◐ en curso · ☑ hecho
 ## Bloqueos
 - Instalar/autenticar `gh` y `vercel` (o dar token) para repo remoto y despliegue.
 - Datos del negocio: precios, servicios, barberos, teléfono/WhatsApp, fotos originales, permisos de imagen.
+
+## Rediseño urbano — 14 de octubre de 2026
+Fases 0–5 completadas en rediseno-urbano con previews verificadas. Fase 6: QA a cinco anchos, teclado, Lighthouse y metadatos; preparar PR y esperar aprobación explícita para producción. Los avances del rediseño no activan el backend de reservas ni dan por confirmados los datos reales. Ver docs/REDISENO-URBANO-FASE-6.md.
