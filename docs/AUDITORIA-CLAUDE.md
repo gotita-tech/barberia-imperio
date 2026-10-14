@@ -60,7 +60,7 @@ Medido en local sin compresión HTTP; en Vercel (con Brotli y la nueva caché) l
 
 ## Sugerencias de texto, no aplicadas (requieren tu ok)
 
-- Pie: "Dirección visual: urbana · Diseño para comparar" es lenguaje interno de la propuesta. Para el lanzamiento: "José Miguel Carrera 315, Llolleo".
+- Pie: aplicado el 14-10-2026, ahora muestra "José Miguel Carrera 315, Llolleo".
 - Unificar "Consultar hora" (filas de servicios) y "Consultar una hora" (header, hero, barra móvil).
 - "PREVIEW 01 / 01" en el asesor está en inglés; alternativa: "VISTA PREVIA".
 
