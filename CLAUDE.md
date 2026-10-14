@@ -31,3 +31,5 @@ Node 26, npm 11, git 2.55. **No hay `gh` ni `vercel` CLI instalados**, ni autent
 Rama rediseno-urbano desde main estática 88e3ccf. Fase 0 completada sin cambios de código; ver docs/REDISENO-URBANO-FASE-0.md. Usuario exige detenerse tras cada fase y esperar ok/sigue. No editar variables, dominios o ajustes del proyecto Vercel sin preguntar. No eliminar secciones sin aprobación ni borrar imágenes originales. Producción solo en Fase 6 mediante PR que apruebe el usuario. CLI Vercel instalada y autenticada; Git Credential Manager permitió publicar la rama. gh está instalado pero su token local es inválido; usar Git/connector para acciones autorizadas.
 
 Rediseño urbano: Fase 1 implementada y verificada localmente; ver docs/REDISENO-URBANO-FASE-1.md. Fase 2 requiere nuevo ok/sigue.
+
+Rediseño urbano: Fase 2 incorpora tokens, Archivo/Archivo Black autoalojadas y estados accesibles. Ver docs/REDISENO-URBANO-FASE-2.md. Esperar autorización antes de Fase 3.

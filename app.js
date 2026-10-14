@@ -1,6 +1,13 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
+  // Los enlaces no admiten disabled nativo; aria-disabled conserva el foco sin activar la acción.
+  document.addEventListener('click', event => {
+    if (event.target.closest('[aria-disabled="true"]')) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }, true);
   const menu = document.querySelector('.menu-toggle');
   const nav = $('main-nav');
   menu?.addEventListener('click', () => {

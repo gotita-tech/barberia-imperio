@@ -11,3 +11,8 @@
 - Copia de consulta accesible y pasos ordenados, piso de 12 px y contraste corregido.
 - Ubicación Llolleo/San Antonio, enlace Maps y Asesor de estilo sin Estilo IA en el menú.
 - Lint y pruebas locales a 360/768/1440 con axe sin violaciones; preview READY verificada con las mismas pruebas.
+
+## 2026-10-14 — Rediseño urbano / Fase 2
+- Sistema visual carbón/marfil/bronce, fuentes locales Archivo/Archivo Black y escala fluida.
+- Estados de controles, pestañas subrayadas, foco contrastado y enlaces deshabilitados protegidos.
+- Licencias y origen de fuentes documentados; estructura urbana pendiente de Fase 3.
