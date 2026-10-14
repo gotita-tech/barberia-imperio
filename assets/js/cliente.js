@@ -91,7 +91,10 @@
 
   function fichaRecomendaciones(res, ia) {
     const extra = new Map((ia?.recomendaciones || []).map(r => [r.id, r.explicacion]));
+    const vistos = new Set(); // cada corte muestra solo los motivos que no se dijeron antes
     return res.recomendaciones.map(r => {
+      const razones = r.razones.filter(t => !vistos.has(t));
+      r.razones.forEach(t => vistos.add(t));
       const sec = el('section', { class: 'rec', 'aria-labelledby': 'rec-' + r.id });
       sec.append(
         el('div', { class: 'rec-top' }, el('span', { class: 'rec-role' }, r.rol), el('span', { class: 'rec-score' }, `Afinidad ${r.afinidad}%`)),
@@ -99,7 +102,7 @@
         el('h3', { id: 'rec-' + r.id }, r.nombre),
         el('p', {}, extra.get(r.id) || r.resumen)
       );
-      if (r.razones.length) sec.append(el('span', { class: 'label' }, 'Por qué te conviene'), el('ul', {}, r.razones.map(t => el('li', {}, t))));
+      if (razones.length) sec.append(el('span', { class: 'label' }, r.rol === 'Recomendación principal' ? 'Por qué te conviene' : 'Además'), el('ul', {}, razones.map(t => el('li', {}, t))));
       if (r.alertas.length) sec.append(el('p', { class: 'warn' }, 'Ojo: ' + r.alertas.join(' ')));
       sec.append(
         el('p', { class: 'ask' }, el('strong', {}, 'CÓMO PEDIRLO'), r.pedir),
@@ -244,7 +247,29 @@
       $('#visita-barbero').replaceWith(sel);
     }).catch(() => {});
 
+    const panelPerfil = $('#panel-perfil');
+    const panelVisita = $('#visita-form').closest('section');
+    const pintarPerfil = () => {
+      const d = leer();
+      const perfil = A.limpiarPerfil(d.perfil);
+      const listo = Object.keys(perfil).length >= 4;
+      const resumen = $('#perfil-resumen');
+      if (listo) {
+        resumen.replaceChildren(el('ul', { class: 'perfil-chips', 'aria-label': 'Tu perfil guardado' },
+          ['tipo', 'rostro', 'densidad', 'mantencion', 'estilo'].filter(k => perfil[k]).map(k => el('li', {}, A.etiqueta(k, perfil[k])))));
+        $('#perfil-details').open = false;
+        // Cliente que vuelve: registrar un corte va primero
+        if (panelPerfil.previousElementSibling !== panelVisita) panelVisita.after(panelPerfil);
+      } else {
+        resumen.textContent = 'Respóndelo una vez; se usa para todas tus recomendaciones.';
+        $('#perfil-details').open = true;
+        if (panelPerfil.nextElementSibling !== panelVisita) panelVisita.before(panelPerfil);
+      }
+      $('#ir-informe').hidden = !(listo || d.visitas.length);
+    };
+
     const pintar = (ia = null) => {
+      pintarPerfil();
       const d = leer();
       $('#historial-lista').replaceChildren(...historialItems(d.visitas));
       $('#historial-vacio').hidden = d.visitas.length > 0;
@@ -276,6 +301,7 @@
       d.nombre = nombre.value.trim().slice(0, 40);
       status.textContent = guardar(d) ? 'Perfil guardado en este dispositivo.' : 'Tu navegador no permite guardar datos en este dispositivo.';
       pintar();
+      $('#perfil-details > summary').focus();
     });
 
     $('#visita-form').addEventListener('submit', async e => {

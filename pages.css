@@ -24,7 +24,6 @@
 
 .page-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 56px; align-items: start; padding: 48px 0 80px; }
 .page-grid.single { grid-template-columns: minmax(0, 1fr); }
-.page-grid > aside { position: sticky; top: 24px; }
 
 /* Cuestionario */
 .quiz { display: grid; gap: 28px; }
@@ -115,6 +114,15 @@ fieldset.q .q-help { color: var(--muted); font-size: 14px; margin: 0 0 12px 34px
 .link-danger { background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; font-size: 14px; min-height: 44px; cursor: pointer; justify-self: start; }
 .link-danger:hover { color: var(--error-text); }
 
+/* Perfil plegable en Mi ficha */
+.perfil-details { border: 0 !important; margin-top: 8px !important; }
+.perfil-details > summary { padding: 14px 0 !important; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-weight: 600; }
+.perfil-details > summary:hover { background: transparent !important; color: var(--gold); }
+.perfil-details[open] > summary { margin-bottom: 8px; }
+.perfil-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 6px; padding: 0; list-style: none; }
+.perfil-chips li { font-size: 12px; padding: 5px 10px; border: 1px solid var(--control-border); color: var(--cream); }
+#ir-informe { margin-top: 18px; }
+
 /* Equipo */
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 340px)); gap: 40px 32px; }
 .profile-card { display: grid; gap: 14px; }
@@ -142,7 +150,6 @@ fieldset.q .q-help { color: var(--muted); font-size: 14px; margin: 0 0 12px 34px
 .rec .label { margin-top: 12px; }
 @media (max-width: 1000px) {
   .page-grid { grid-template-columns: 1fr; gap: 40px; }
-  .page-grid > aside { position: static; }
 }
 @media (max-width: 580px) {
   .page-hero { padding: 36px 0 28px; }
@@ -166,6 +173,5 @@ fieldset.q .q-help { color: var(--muted); font-size: 14px; margin: 0 0 12px 34px
   body.urban { background: #fff; padding: 0 !important; }
   .announcement, .site-header, .site-footer, .page-hero, .page-grid > :not(aside), .ficha-actions, .mobile-bar, .skip-link, .timeline button { display: none !important; }
   .page-grid { display: block; padding: 0; }
-  .page-grid > aside { position: static; }
   .ficha { box-shadow: none; background: #fff; padding: 0; }
 }
