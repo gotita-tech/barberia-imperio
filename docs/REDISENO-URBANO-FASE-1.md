@@ -22,3 +22,6 @@ Playwright/Chromium a 360, 768 y 1440 px: portapapeles real y rechazo simulado p
 La Fase 2 incorporará sistema visual y fuentes autoalojadas. Estructura urbana, fotografía, recorrido y QA final siguen en sus fases respectivas. La ampliación de imágenes, los iconos incrustados y la barra móvil fija pertenecen a esas fases; no se dan por resueltos aquí.
 
 No se modificaron imágenes originales, variables, dominios ni configuración del proyecto Vercel. No se creó PR ni se publicó a producción. Detenerse tras entregar la preview y esperar autorización para Fase 2.
+
+## Preview verificada
+https://barberia-imperio-demo-5d3huirm0-gotech2.vercel.app/ — READY, deployment dpl_F6e9t9NbXazsdQkomU7hyfSbGzhi, código 4ebe0eb. Conserva autenticación Vercel. Las mismas pruebas locales pasaron en el despliegue real a 360/768/1440 px; capturas en outputs del chat. No se envió ninguna consulta a Instagram.
