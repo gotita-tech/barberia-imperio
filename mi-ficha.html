@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c0e">
+  <meta name="description" content="Tu historial de cortes en Barbería Imperio con informe detallado, próxima visita sugerida y recomendaciones según lo que te ha gustado.">
+  <title>Mi ficha | Barbería Imperio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://barberia-imperio-demo.vercel.app/mi-ficha">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Barbería Imperio">
+  <meta property="og:title" content="Mi ficha · Barbería Imperio">
+  <meta property="og:description" content="Tu historial de cortes en Barbería Imperio con informe detallado, próxima visita sugerida y recomendaciones según lo que te ha gustado.">
+  <meta property="og:url" content="https://barberia-imperio-demo.vercel.app/mi-ficha">
+  <meta property="og:image" content="https://barberia-imperio-demo.vercel.app/assets/og-imperio.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo original blanco y negro de Barbería Imperio junto al lema Tu estilo. Nuestro Imperio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo-imperio-96.png">
+  <link rel="apple-touch-icon" href="/assets/logo-imperio.png">
+  <link rel="preload" href="/assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/design-system.css">
+  <link rel="stylesheet" href="/urban.css">
+  <link rel="stylesheet" href="/pages.css">
+</head>
+<body class="urban" data-page="ficha">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement">Propuesta de diseño · Demostración · Sin reservas activas</div>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="/" aria-label="Barbería Imperio, ir al inicio"><picture><source srcset="/assets/logo-imperio-96.webp" type="image/webp"><img src="/assets/logo-imperio-96.png" alt="" width="48" height="48"></picture> <span> <small>BARBERÍA</small> <strong>IMPERIO</strong></span></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"> <span></span> <span></span> <span></span></button>
+      <nav id="main-nav" class="nav-links" aria-label="Navegación principal"><a href="/#estilos">Nuestros trabajos</a><a href="/asesor">Asesor de estilo</a><a href="/mi-ficha" class="is-current" aria-current="page">Mi ficha</a><a href="/equipo">Equipo</a><a class="btn btn-gold nav-reserve" href="/#reservar">Consultar una hora <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="page-hero shell" aria-labelledby="page-title"><p class="eyebrow">Mi ficha · Cliente Imperio</p><h1 id="page-title"><span>TU HISTORIAL.</span> <span class="bronze">TU ESTILO.</span></h1><p class="lead">Registra tus cortes y cómo te fue con cada uno. Tu ficha suma visitas, calcula cada cuánto vienes, propone tu próxima visita y ajusta las recomendaciones a lo que te ha gustado.</p><p class="demo-note">Demostración sin cuentas: tu ficha se guarda solo en este navegador, no en un servidor. Puedes imprimirla, compartirla por Instagram o borrarla cuando quieras.</p></section>
+    <div class="shell page-grid">
+      <div class="stack">
+        <section class="panel" aria-labelledby="perfil-title">
+          <h2 id="perfil-title">1 · Tu perfil de estilo</h2>
+          <p>Respóndelo una vez; se usa para todas tus recomendaciones.</p>
+          <label for="cliente-nombre">Cómo quieres que te llamemos <span>(opcional)</span></label>
+          <input id="cliente-nombre" type="text" maxlength="40" autocomplete="given-name">
+          <form id="quiz" class="quiz" style="margin-top:20px" novalidate><div class="quiz-progress"><span><strong>0 de 11</strong> respondidas</span><span class="quiz-meter" aria-hidden="true"><i style="width:0%"></i></span></div><fieldset class="q"><legend><span class="q-n" aria-hidden="true">01</span>Forma de tu rostro</legend><p class="q-help" id="help-rostro">Mírate de frente con el pelo hacia atrás. Si dudas, elige «No estoy seguro».</p><div class="choices"><div class="choice"><input type="radio" name="rostro" id="q-rostro-ovalado" value="ovalado" aria-describedby="help-rostro"><label for="q-rostro-ovalado">Ovalado<small>Frente y mentón proporcionados, algo más largo que ancho</small></label></div><div class="choice"><input type="radio" name="rostro" id="q-rostro-redondo" value="redondo" aria-describedby="help-rostro"><label for="q-rostro-redondo">Redondo<small>Ancho y largo parecidos, mandíbula suave</small></label></div><div class="choice"><input type="radio" name="rostro" id="q-rostro-cuadrado" value="cuadrado" aria-describedby="help-rostro"><label for="q-rostro-cuadrado">Cuadrado<small>Mandíbula marcada y frente ancha</small></label></div><div class="choice"><input type="radio" name="rostro" id="q-rostro-alargado" value="alargado" aria-describedby="help-rostro"><label for="q-rostro-alargado">Alargado<small>Bastante más largo que ancho</small></label></div><div class="choice"><input type="radio" name="rostro" id="q-rostro-corazon" value="corazon" aria-describedby="help-rostro"><label for="q-rostro-corazon">Triangular invertido<small>Frente ancha y mentón estrecho</small></label></div><div class="choice"><input type="radio" name="rostro" id="q-rostro-no_se" value="no_se" aria-describedby="help-rostro"><label for="q-rostro-no_se">No estoy seguro<small>Lo vemos en la barbería</small></label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">02</span>Tipo de cabello</legend><div class="choices"><div class="choice"><input type="radio" name="tipo" id="q-tipo-liso" value="liso"><label for="q-tipo-liso">Liso<small>Cae recto, sin forma propia</small></label></div><div class="choice"><input type="radio" name="tipo" id="q-tipo-ondulado" value="ondulado"><label for="q-tipo-ondulado">Ondulado<small>Forma ondas suaves al secarse</small></label></div><div class="choice"><input type="radio" name="tipo" id="q-tipo-rizado" value="rizado"><label for="q-tipo-rizado">Rizado<small>Rizos definidos</small></label></div><div class="choice"><input type="radio" name="tipo" id="q-tipo-afro" value="afro"><label for="q-tipo-afro">Afro / muy rizado<small>Rizo cerrado y con volumen</small></label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">03</span>Grosor de cada pelo</legend><div class="choices"><div class="choice"><input type="radio" name="grosor" id="q-grosor-fino" value="fino"><label for="q-grosor-fino">Fino<small>Se aplasta con facilidad</small></label></div><div class="choice"><input type="radio" name="grosor" id="q-grosor-medio" value="medio"><label for="q-grosor-medio">Medio<small>Ni muy fino ni muy grueso</small></label></div><div class="choice"><input type="radio" name="grosor" id="q-grosor-grueso" value="grueso"><label for="q-grosor-grueso">Grueso<small>Firme, cuesta peinarlo</small></label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">04</span>Cantidad de cabello</legend><div class="choices"><div class="choice"><input type="radio" name="densidad" id="q-densidad-baja" value="baja"><label for="q-densidad-baja">Poca<small>Se ve el cuero cabelludo con luz directa</small></label></div><div class="choice"><input type="radio" name="densidad" id="q-densidad-media" value="media"><label for="q-densidad-media">Normal</label></div><div class="choice"><input type="radio" name="densidad" id="q-densidad-alta" value="alta"><label for="q-densidad-alta">Abundante<small>Mucho volumen, cuesta controlarlo</small></label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">05</span>Entradas</legend><div class="choices"><div class="choice"><input type="radio" name="entradas" id="q-entradas-no" value="no"><label for="q-entradas-no">Sin entradas</label></div><div class="choice"><input type="radio" name="entradas" id="q-entradas-leves" value="leves"><label for="q-entradas-leves">Leves</label></div><div class="choice"><input type="radio" name="entradas" id="q-entradas-marcadas" value="marcadas"><label for="q-entradas-marcadas">Marcadas</label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">06</span>Remolinos</legend><div class="choices"><div class="choice"><input type="radio" name="remolino" id="q-remolino-no" value="no"><label for="q-remolino-no">No tengo</label></div><div class="choice"><input type="radio" name="remolino" id="q-remolino-coronilla" value="coronilla"><label for="q-remolino-coronilla">En la coronilla</label></div><div class="choice"><input type="radio" name="remolino" id="q-remolino-frente" value="frente"><label for="q-remolino-frente">En la frente</label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">07</span>Barba</legend><div class="choices"><div class="choice"><input type="radio" name="barba" id="q-barba-no" value="no"><label for="q-barba-no">Sin barba</label></div><div class="choice"><input type="radio" name="barba" id="q-barba-corta" value="corta"><label for="q-barba-corta">Corta o de pocos días</label></div><div class="choice"><input type="radio" name="barba" id="q-barba-larga" value="larga"><label for="q-barba-larga">Larga</label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">08</span>Tiempo para peinarte cada día</legend><div class="choices"><div class="choice"><input type="radio" name="mantencion" id="q-mantencion-baja" value="baja"><label for="q-mantencion-baja">Nada o casi nada</label></div><div class="choice"><input type="radio" name="mantencion" id="q-mantencion-media" value="media"><label for="q-mantencion-media">Unos 5 minutos</label></div><div class="choice"><input type="radio" name="mantencion" id="q-mantencion-alta" value="alta"><label for="q-mantencion-alta">Me gusta dedicarle tiempo</label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">09</span>Cada cuánto puedes venir</legend><div class="choices"><div class="choice"><input type="radio" name="frecuencia" id="q-frecuencia-quincenal" value="quincenal"><label for="q-frecuencia-quincenal">Cada 2 semanas</label></div><div class="choice"><input type="radio" name="frecuencia" id="q-frecuencia-mensual" value="mensual"><label for="q-frecuencia-mensual">Una vez al mes</label></div><div class="choice"><input type="radio" name="frecuencia" id="q-frecuencia-bimensual" value="bimensual"><label for="q-frecuencia-bimensual">Cada 2 meses o más</label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">10</span>Tu día a día</legend><div class="choices"><div class="choice"><input type="radio" name="contexto" id="q-contexto-formal" value="formal"><label for="q-contexto-formal">Trabajo formal<small>Oficina, atención de público</small></label></div><div class="choice"><input type="radio" name="contexto" id="q-contexto-creativo" value="creativo"><label for="q-contexto-creativo">Creativo o libre</label></div><div class="choice"><input type="radio" name="contexto" id="q-contexto-deportivo" value="deportivo"><label for="q-contexto-deportivo">Deporte o trabajo físico</label></div><div class="choice"><input type="radio" name="contexto" id="q-contexto-mixto" value="mixto"><label for="q-contexto-mixto">Un poco de todo</label></div></div></fieldset><fieldset class="q"><legend><span class="q-n" aria-hidden="true">11</span>Qué buscas</legend><div class="choices"><div class="choice"><input type="radio" name="estilo" id="q-estilo-clasico" value="clasico"><label for="q-estilo-clasico">Clásico y prolijo</label></div><div class="choice"><input type="radio" name="estilo" id="q-estilo-actual" value="actual"><label for="q-estilo-actual">Actual pero sobrio</label></div><div class="choice"><input type="radio" name="estilo" id="q-estilo-llamativo" value="llamativo"><label for="q-estilo-llamativo">Que destaque</label></div></div></fieldset></form>
+          <button id="perfil-guardar" class="btn btn-gold" type="button">Guardar perfil</button>
+        </section>
+        <section class="panel" aria-labelledby="visita-title">
+          <h2 id="visita-title">2 · Registra un corte</h2>
+          <p>Después de cada visita, anota qué te hiciste y cómo te quedó.</p>
+          <form id="visita-form" novalidate>
+            <label for="visita-fecha">Fecha</label>
+            <input id="visita-fecha" type="date" required aria-describedby="visita-fecha-error" aria-invalid="false">
+            <p id="visita-fecha-error" class="field-error" hidden></p>
+            <label for="visita-corte">Corte</label>
+            <select id="visita-corte"></select>
+            <label for="visita-barbero">Barbero <span>(opcional)</span></label>
+            <input id="visita-barbero" type="text" maxlength="40">
+            <fieldset class="q" style="margin-top:14px"><legend style="font-size:14px">¿Cómo te quedó? <span style="color:var(--muted);font-weight:400">(opcional)</span></legend>
+              <div class="rating"><div class="choice"><input type="radio" name="satisfaccion" id="sat-1" value="1"><label for="sat-1">1 <span class="sr-only">de 5</span></label></div><div class="choice"><input type="radio" name="satisfaccion" id="sat-2" value="2"><label for="sat-2">2 <span class="sr-only">de 5</span></label></div><div class="choice"><input type="radio" name="satisfaccion" id="sat-3" value="3"><label for="sat-3">3 <span class="sr-only">de 5</span></label></div><div class="choice"><input type="radio" name="satisfaccion" id="sat-4" value="4"><label for="sat-4">4 <span class="sr-only">de 5</span></label></div><div class="choice"><input type="radio" name="satisfaccion" id="sat-5" value="5"><label for="sat-5">5 <span class="sr-only">de 5</span></label></div></div>
+            </fieldset>
+            <label for="visita-nota">Nota para la próxima vez <span>(opcional)</span></label>
+            <textarea id="visita-nota" maxlength="200" placeholder="Ej.: la próxima vez, un poco más corto arriba"></textarea>
+            <button class="btn btn-gold" type="submit">Agregar al historial</button>
+          </form>
+        </section>
+        <section class="panel" aria-labelledby="historial-title">
+          <h2 id="historial-title">3 · Tu historial</h2>
+          <p id="historial-vacio">Aún no registras visitas.</p>
+          <div class="ficha" style="box-shadow:none;padding:4px 18px 12px"><ul id="historial-lista" class="timeline"></ul></div>
+          <p id="ficha-status" class="quiz-status" role="status" aria-live="polite"></p>
+          <p class="privacy">Se guarda en este navegador. Si cambias de teléfono o borras los datos del navegador, la ficha no se recupera. Cuando la barbería active las cuentas, podrás llevarte tu historial.</p>
+          <button id="borrar-todo" class="link-danger" type="button">Borrar mis datos de este dispositivo</button>
+        </section>
+      </div>
+      <aside id="resultado" aria-label="Informe del cliente" aria-live="polite"><div class="ficha-empty"><strong>Tu informe aparecerá aquí</strong>Completa tu perfil de estilo y registra tus visitas. El informe se actualiza con cada corte.</div></aside>
+    </div>
+  </main>
+  <footer class="site-footer"> <div class="shell footer-main"><a class="footer-signature" href="/" aria-label="Tu estilo. Nuestro Imperio. — ir al inicio"><picture><source srcset="/assets/logo-imperio-96.webp" type="image/webp"><img src="/assets/logo-imperio-96.png" alt="" width="42" height="42" loading="lazy"></picture> <span>Tu estilo. Nuestro Imperio.</span></a> <p>José Miguel Carrera 315, Llolleo</p></div> <div class="shell footer-bottom"> <small>© <span id="current-year"></span> Barbería Imperio · Demostración.</small><a href="#contenido">Volver arriba <span aria-hidden="true">↑</span></a></div></footer>
+  <script src="/assets/js/asesor-engine.js" defer></script>
+  <script src="/assets/js/cliente.js" defer></script>
+</body>
+</html>
