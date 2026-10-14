@@ -24,3 +24,7 @@ Fase 0 cerrada (ver ROADMAP). Siguiente: Fase 1 (Next.js + sitio MVP).
 
 ## Entorno
 Node 26, npm 11, git 2.55. **No hay `gh` ni `vercel` CLI instalados**, ni autenticación GitHub/Vercel → repo remoto y vínculo Vercel pendientes.
+
+## Encargo activo: rediseño urbano (2026-10-14)
+
+Rama rediseno-urbano desde main estática 88e3ccf. Fase 0 completada sin cambios de código; ver docs/REDISENO-URBANO-FASE-0.md. Usuario exige detenerse tras cada fase y esperar ok/sigue. No editar variables, dominios o ajustes del proyecto Vercel sin preguntar. No eliminar secciones sin aprobación ni borrar imágenes originales. Producción solo en Fase 6 mediante PR que apruebe el usuario. CLI Vercel instalada y autenticada; Git Credential Manager permitió publicar la rama. gh está instalado pero su token local es inválido; usar Git/connector para acciones autorizadas.
