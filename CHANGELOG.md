@@ -6,3 +6,4 @@
 - Rama rediseno-urbano creada desde main y publicada; reconocimiento del stack estático, inventario de imágenes y propuesta de secciones/tipografía.
 - Preview de referencia READY en el proyecto Vercel existente; capturas a 360, 768 y 1440 px sin errores JavaScript ni desbordamiento.
 - Sin cambios de código, fotografías o configuración del proyecto; Fase 1 pendiente de autorización. Ver docs/REDISENO-URBANO-FASE-0.md.
+`n## 2026-10-14 — Rediseño urbano / Fase 1`n- Copia de consulta accesible y pasos ordenados, piso de 12 px y contraste corregido.`n- Ubicación Llolleo/San Antonio, enlace Maps y Asesor de estilo sin Estilo IA en el menú.`n- Lint y pruebas locales a 360/768/1440 con axe sin violaciones; preview pendiente de comprobación.

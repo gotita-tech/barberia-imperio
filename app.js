@@ -68,6 +68,8 @@
   form?.addEventListener('submit', event => {
     event.preventDefault();
     error.hidden = true;
+    $('copy-status').textContent = '';
+    $('copy-booking').textContent = '1 · Copiar mensaje';
     const service = $('appointment-service').value;
     const dateStr = dateInput.value;
     const time = $('appointment-time').value;
@@ -101,7 +103,7 @@
     const text = $('booking-message').textContent;
     try {
       await navigator.clipboard.writeText(text);
-      $('copy-booking').textContent = '¡Mensaje copiado!';
+      $('copy-status').textContent = 'Mensaje copiado. Ahora abre Instagram y pégalo en tu consulta.';
     } catch {
       // Fallback para apertura local vía file://.
       const selection = window.getSelection();
@@ -109,7 +111,7 @@
       range.selectNodeContents($('booking-message'));
       selection.removeAllRanges();
       selection.addRange(range);
-      $('copy-booking').textContent = 'Seleccionado: presiona Ctrl+C';
+      $('copy-status').textContent = 'No se pudo copiar automáticamente. El mensaje está seleccionado: cópialo desde el menú de tu dispositivo o presiona Ctrl+C (⌘C en Mac).';
     }
   });
   $('current-year').textContent = new Date().getFullYear();
