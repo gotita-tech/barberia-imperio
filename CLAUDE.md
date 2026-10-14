@@ -39,3 +39,5 @@ Rediseño urbano: Fase 3 estructura urbana aplicada. Servicios integrado, Equipo
 Rediseño urbano: Fase 4 recortes sin iconos, srcset y máximo 240 px. Originales intactos en assets/_archivo/originales. Ver docs/REDISENO-URBANO-FASE-4.md. Esperar autorización antes de Fase 5.
 
 Rediseño urbano: Fase 5 conecta categorías/sugerencias al formulario, tarjetas a Instagram y CTA móvil condicional. Ver docs/REDISENO-URBANO-FASE-5.md. Esperar autorización antes de Fase 6 y aprobación explícita del PR para producción.
+
+Vercel: usar plugin mcp__codex_apps__vercel y CLI con scope gotech2 y global-config de work/vercel-auth. MCP manual duplicado desactivado en config.toml por 403 de equipo tras OAuth exitoso. No repetir ese login por fase. Ver docs/CONEXION-VERCEL.md. Git usa credential.username=gotita-tech en configuración local.
