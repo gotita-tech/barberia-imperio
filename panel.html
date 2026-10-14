@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c0e">
+  <meta name="description" content="Demostración del panel interno de Barbería Imperio con datos ficticios.">
+  <title>Panel de la barbería | Barbería Imperio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://barberia-imperio-demo.vercel.app/panel">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Barbería Imperio">
+  <meta property="og:title" content="Panel · Barbería Imperio">
+  <meta property="og:description" content="Demostración del panel interno de Barbería Imperio con datos ficticios.">
+  <meta property="og:url" content="https://barberia-imperio-demo.vercel.app/panel">
+  <meta property="og:image" content="https://barberia-imperio-demo.vercel.app/assets/og-imperio.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo original blanco y negro de Barbería Imperio junto al lema Tu estilo. Nuestro Imperio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/logo-imperio-96.png">
+  <link rel="apple-touch-icon" href="/assets/logo-imperio.png">
+  <link rel="preload" href="/assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/design-system.css">
+  <link rel="stylesheet" href="/urban.css">
+  <link rel="stylesheet" href="/pages.css">
+</head>
+<body class="urban" data-page="panel">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="announcement">Propuesta de diseño · Demostración · Sin reservas activas</div>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="/" aria-label="Barbería Imperio, ir al inicio"><picture><source srcset="/assets/logo-imperio-96.webp" type="image/webp"><img src="/assets/logo-imperio-96.png" alt="" width="48" height="48"></picture> <span> <small>BARBERÍA</small> <strong>IMPERIO</strong></span></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"> <span></span> <span></span> <span></span></button>
+      <nav id="main-nav" class="nav-links" aria-label="Navegación principal"><a href="/#estilos">Nuestros trabajos</a><a href="/asesor">Asesor de estilo</a><a href="/mi-ficha">Mi ficha</a><a href="/equipo">Equipo</a><a class="btn btn-gold nav-reserve" href="/#reservar">Consultar una hora <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="page-hero shell" aria-labelledby="page-title"><p class="eyebrow">Panel de la barbería · Vista del personal</p><h1 id="page-title"><span>TUS CLIENTES.</span> <span class="bronze">DE UN VISTAZO.</span></h1><p class="lead">Quién debería volver esta semana, qué cortes se piden más y cómo los califican los clientes. Se alimenta de las fichas que los clientes llenan en la web.</p></section>
+    <div class="shell ejemplo-banda" role="note"><strong>Datos de ejemplo.</strong> Clientes y visitas ficticios, generados para mostrar el panel. Con las cuentas activas, aquí aparecerán los clientes reales y solo el personal podrá verlo.</div>
+    <div class="shell panel-page">
+      <dl class="kpis" id="kpis" aria-label="Resumen"></dl>
+      <div class="panel-grid">
+        <div class="panel-col">
+        <section class="panel" aria-labelledby="volver-title">
+          <h2 id="volver-title">Por volver esta semana</h2>
+          <p>Según cada cuánto viene cada cliente. Ideal para un recordatorio por WhatsApp.</p>
+          <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Cliente</th><th scope="col">Corte habitual</th><th scope="col">Última visita</th><th scope="col">Viene cada</th><th scope="col">Próxima</th><th scope="col"><span class="sr-only">Acción</span></th></tr></thead><tbody id="tabla-volver"></tbody></table></div>
+        </section>
+        <section class="panel" aria-labelledby="sat-title">
+          <h2 id="sat-title">Nota por corte</h2>
+          <p>Promedio de 1 a 5 (cortes con 4 o más notas).</p>
+          <div class="table-wrap"><table class="data-table"><thead><tr><th scope="col">Corte</th><th scope="col">Nota</th><th scope="col">Visitas</th></tr></thead><tbody id="tabla-sat"></tbody></table></div>
+        </section>
+        </div>
+        <div class="panel-col">
+        <section class="panel" aria-labelledby="cortes-title">
+          <h2 id="cortes-title">Cortes más pedidos</h2>
+          <p>Visitas de los últimos 90 días.</p>
+          <div id="chart-cortes"></div>
+        </section>
+        <section class="panel" aria-labelledby="semanas-title">
+          <h2 id="semanas-title">Visitas por semana</h2>
+          <p>Últimas 8 semanas.</p>
+          <div id="chart-semanas"></div>
+        </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"> <div class="shell footer-main"><a class="footer-signature" href="/" aria-label="Tu estilo. Nuestro Imperio. — ir al inicio"><picture><source srcset="/assets/logo-imperio-96.webp" type="image/webp"><img src="/assets/logo-imperio-96.png" alt="" width="42" height="42" loading="lazy"></picture> <span>Tu estilo. Nuestro Imperio.</span></a> <p>José Miguel Carrera 315, Llolleo</p></div> <div class="shell footer-bottom"> <small>© <span id="current-year"></span> Barbería Imperio · Demostración.</small><a href="#contenido">Volver arriba <span aria-hidden="true">↑</span></a></div></footer>
+  <script src="/assets/js/asesor-engine.js" defer></script>
+  <script src="/assets/js/cliente.js" defer></script>
+  <script src="/assets/js/panel.js" defer></script>
+</body>
+</html>

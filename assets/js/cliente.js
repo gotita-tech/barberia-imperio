@@ -33,16 +33,37 @@
   /* ---------- Almacenamiento en el dispositivo ---------- */
   const KEY = 'imperio.cliente.v1';
   const vacio = () => ({ nombre: '', perfil: {}, visitas: [], actualizado: null });
+
+  // Modo ejemplo (/mi-ficha?ejemplo): datos ficticios solo en memoria; nunca toca la ficha real del visitante.
+  const EJEMPLO = document.body.dataset.page === 'ficha' && new URLSearchParams(location.search).has('ejemplo');
+  const haceDias = n => {
+    const d = new Date(); d.setDate(d.getDate() - n);
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago' }).format(d);
+  };
+  let memoria = EJEMPLO ? {
+    nombre: 'Cliente de ejemplo',
+    perfil: { rostro: 'cuadrado', tipo: 'ondulado', grosor: 'medio', densidad: 'alta', entradas: 'leves', remolino: 'coronilla', barba: 'corta', mantencion: 'media', frecuencia: 'mensual', contexto: 'mixto', estilo: 'actual' },
+    visitas: [
+      { id: 'e1', fecha: haceDias(150), corte: 'taper-clasico', barbero: '', satisfaccion: 4, nota: 'Dejar un poco más largo arriba.' },
+      { id: 'e2', fecha: haceDias(118), corte: 'low-fade-textura', barbero: '', satisfaccion: 5, nota: '' },
+      { id: 'e3', fecha: haceDias(86), corte: 'low-fade-textura', barbero: '', satisfaccion: 5, nota: 'Repetir igual.' },
+      { id: 'e4', fecha: haceDias(55), corte: 'buzz-cut', barbero: '', satisfaccion: 2, nota: 'Muy corto para el trabajo.' },
+      { id: 'e5', fecha: haceDias(24), corte: 'low-fade-textura', barbero: '', satisfaccion: 4, nota: '' }
+    ], actualizado: null
+  } : null;
+
   const leer = () => {
+    if (EJEMPLO) return JSON.parse(JSON.stringify(memoria));
     try { const d = JSON.parse(localStorage.getItem(KEY)); return d && typeof d === 'object' ? Object.assign(vacio(), d) : vacio(); }
     catch { return vacio(); }
   };
   let guardable = true;
   const guardar = datos => {
     datos.actualizado = new Date().toISOString();
+    if (EJEMPLO) { memoria = JSON.parse(JSON.stringify(datos)); return true; }
     try { localStorage.setItem(KEY, JSON.stringify(datos)); return true; } catch { guardable = false; return false; }
   };
-  const borrar = () => { try { localStorage.removeItem(KEY); } catch { /* sin acceso */ } };
+  const borrar = () => { if (EJEMPLO) { memoria = vacio(); return; } try { localStorage.removeItem(KEY); } catch { /* sin acceso */ } };
 
   const hoyChile = () => {
     const p = new Intl.DateTimeFormat('en', { timeZone: 'America/Santiago', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
@@ -224,6 +245,11 @@
 
   /* ---------- Página: Mi ficha ---------- */
   function paginaFicha() {
+    const banda = $('#ejemplo-banda');
+    if (EJEMPLO) {
+      banda.hidden = false;
+      $('#ver-ejemplo').hidden = true;
+    }
     const datos = leer();
     const salida = $('#resultado');
     const nombre = $('#cliente-nombre');

@@ -181,3 +181,15 @@ html:has(body.urban) { scroll-padding-top: 16px; }
   /* Evita que la barra fija inferior tape el elemento con foco (WCAG 2.4.11). */
   html:has(body.urban.mobile-cta-enabled) { scroll-padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
 }
+/* Botones de contacto: WhatsApp y Google Maps */
+.urban .btn .btn-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.urban .band-actions { display: grid; gap: 10px; min-width: 250px; }
+.urban .band-actions .btn, .urban .closing-action .btn { justify-content: flex-start; gap: 12px; flex-wrap: wrap; }
+.urban .closing-action { display: grid; gap: 10px; }
+.urban .closing-action .fine-print { margin-top: 4px; }
+.urban .location-band .btn-ink { --focus: var(--bg); }
+.urban .wa-pending { text-align: left; flex-basis: 100%; font-size: 12px; font-weight: 400; margin-left: 30px; margin-top: -4px; }
+.urban [data-whatsapp]:not([aria-disabled='true']) .wa-pending { display: none; }
+.urban .location-band .btn-ink[aria-disabled='true'] { background: #a88e62; border-color: #a88e62; color: var(--bg); }
+@media(max-width:840px) { .urban .band-actions { grid-column: 1 / -1; grid-template-columns: 1fr 1fr; min-width: 0; } }
+@media(max-width:580px) { .urban .band-actions { grid-template-columns: 1fr; } }
